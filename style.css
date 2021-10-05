@@ -10,11 +10,14 @@ body {
     background-color: beige;
 
 }
+
+
 .wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -25,7 +28,7 @@ body {
 
 .desc {
     flex: 1 1 auto;
-    padding-left: 650px;
+    padding-left: 350px;
 }
 
 .foot {
@@ -43,34 +46,51 @@ body {
     background-color: #ef94ac;
     height: 45px;
     width: 280px;
-    margin-top: 300px;
+    margin-top: 200px;
+
 }
 
 .button:hover,
 .button:focus,
 .button:active {
     background-color: #ef366c;
+
 }
 
-.heding {
-    margin-top: 110px;
-}
 
-.modal {
-    margin-top: 100px;
-    display: none;
-    font-size: 55px;
-    position: fixed;
-    color: #db275c;
-}
 
-.modal-show {
-    display: block;
-    animation:bounce 0.6s;
-}
+
 @keyframes bounce {
     0% {transform:translateY(-2000px); }
     70% {transform:translateY(300px);}
     90% {transform:translateY(-10px);}
     100% {transform:translateY(0);}
+}
+
+.modal,  .modal-1{
+    order: 1;
+    display: none;
+    position: fixed;
+    color: #db275c;
+
+
+}
+
+.modal-show {
+    width: auto;
+    height: auto;
+    display: block;
+    animation:bounce 0.6s;
+    padding-top: 250px;
+    padding-left: 130px;
+
+}
+.modal-shows {
+    padding-top: 110px;
+    width: auto;
+    height: auto;
+    display: block;
+    animation:bounce 0.6s;
+    padding-top: 10px;
+    padding-left: 450px;
 }
